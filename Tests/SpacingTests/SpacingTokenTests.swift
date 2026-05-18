@@ -42,10 +42,21 @@ struct SpacingTokenTests
         #expect(PanelPadding.message > PanelPadding.detail)
     }
 
-    @Test func controlDimensionsKeepCompactControlsStable() async throws
+    @Test func filterControlDimensionsKeepCapsuleControlsStable() async throws
     {
-        #expect(ControlDimensions.filterBarHeight > ControlDimensions.filterSlotHeight)
-        #expect(ControlDimensions.searchFieldHeight > ControlDimensions.stateActionButtonHeight)
-        #expect(ControlDimensions.filterDividerHeight < ControlDimensions.filterBarHeight)
+        #expect(FilterControlDimensions.barHeight > FilterControlDimensions.slotHeight)
+        #expect(FilterControlDimensions.dividerHeight < FilterControlDimensions.barHeight)
+        #expect(FilterControlDimensions.dividerWidth < FilterControlDimensions.dividerHeight)
+    }
+
+    @Test func searchControlDimensionsKeepSearchFieldStable() async throws
+    {
+        #expect(SearchControlDimensions.fieldHeight > StateActionDimensions.buttonHeight)
+    }
+
+    @Test func stateActionButtonSizeReusesWidthAndHeightTokens() async throws
+    {
+        #expect(StateActionDimensions.buttonSize.width == StateActionDimensions.buttonWidth)
+        #expect(StateActionDimensions.buttonSize.height == StateActionDimensions.buttonHeight)
     }
 }
