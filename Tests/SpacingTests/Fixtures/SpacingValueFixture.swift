@@ -22,6 +22,7 @@ enum SpacingValueFixture
         PanelPadding.card,
         PanelPadding.detail,
         PanelPadding.message,
+        ListRowSpacing.trailingMetadata,
         ListRowSpacing.verticalPadding,
         ListRowSpacing.selectionHorizontalPadding
     ]
@@ -37,6 +38,9 @@ enum SpacingValueFixture
     [
         ContentWidth.detail,
         ContentWidth.message,
+        SidebarDimensions.minimumWidth,
+        SidebarDimensions.idealWidth,
+        SidebarDimensions.maximumWidth,
         FilterControlDimensions.dividerWidth,
         StateActionDimensions.buttonWidth
     ]

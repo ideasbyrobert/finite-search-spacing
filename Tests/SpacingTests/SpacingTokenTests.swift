@@ -28,10 +28,10 @@ struct SpacingTokenTests
 
     @Test func listRowInsetsStayCompactAndDirectional() async throws
     {
-        #expect(ListRowSpacing.contentInsets.top == 1)
-        #expect(ListRowSpacing.contentInsets.bottom == 1)
+        #expect(ListRowSpacing.contentInsets.top == 2)
+        #expect(ListRowSpacing.contentInsets.bottom == 2)
         #expect(ListRowSpacing.contentInsets.leading == 12)
-        #expect(ListRowSpacing.contentInsets.trailing == 10)
+        #expect(ListRowSpacing.contentInsets.trailing == 12)
         #expect(ListRowSpacing.contentInsets.leading > ListRowSpacing.contentInsets.top)
     }
 
@@ -58,5 +58,11 @@ struct SpacingTokenTests
     {
         #expect(StateActionDimensions.buttonSize.width == StateActionDimensions.buttonWidth)
         #expect(StateActionDimensions.buttonSize.height == StateActionDimensions.buttonHeight)
+    }
+
+    @Test func sidebarDimensionsKeepTheSplitViewComfortable() async throws
+    {
+        #expect(SidebarDimensions.minimumWidth < SidebarDimensions.idealWidth)
+        #expect(SidebarDimensions.idealWidth < SidebarDimensions.maximumWidth)
     }
 }
