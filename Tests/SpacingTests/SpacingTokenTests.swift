@@ -41,4 +41,11 @@ struct SpacingTokenTests
         #expect(PanelPadding.detail > PanelPadding.card)
         #expect(PanelPadding.message > PanelPadding.detail)
     }
+
+    @Test func controlDimensionsKeepCompactControlsStable() async throws
+    {
+        #expect(ControlDimensions.filterBarHeight > ControlDimensions.filterSlotHeight)
+        #expect(ControlDimensions.searchFieldHeight > ControlDimensions.stateActionButtonHeight)
+        #expect(ControlDimensions.filterDividerHeight < ControlDimensions.filterBarHeight)
+    }
 }

@@ -36,11 +36,23 @@ enum SpacingValueFixture
     static let widthValues: [CGFloat] =
     [
         ContentWidth.detail,
-        ContentWidth.message
+        ContentWidth.message,
+        ControlDimensions.filterDividerWidth,
+        ControlDimensions.stateActionButtonWidth,
+        ControlDimensions.shortcutCaptureSize
+    ]
+
+    static let heightValues: [CGFloat] =
+    [
+        ControlDimensions.filterBarHeight,
+        ControlDimensions.filterSlotHeight,
+        ControlDimensions.filterDividerHeight,
+        ControlDimensions.searchFieldHeight,
+        ControlDimensions.stateActionButtonHeight
     ]
 
     static var allScalarValues: [CGFloat]
     {
-        stackValues + paddingValues + radiusValues + widthValues
+        stackValues + paddingValues + radiusValues + widthValues + heightValues
     }
 }
